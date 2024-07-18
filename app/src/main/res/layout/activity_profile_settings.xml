@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ProfileSettings">
+
+
+
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle_ripple_2"
+        android:src="@drawable/baseline_arrow_back_24_2"
+        android:contentDescription="@string/back_button_desc"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/profileSettingsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuracion de perfil"
+            android:textStyle="bold"
+            android:textSize="24sp"
+
+            android:layout_marginBottom="20dp"/>
+
+
+        <TextView
+            android:id="@+id/profile_changeimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar foto"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/profile_imageIconChange"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_profile_placeholder"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/profile_image_background" />
+
+
+        <TextView
+            android:id="@+id/profile_changeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar nombre"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/txtChangeName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nombre"
+            android:background="@drawable/background_edit_text"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/updatePassLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/profileSettingsLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar contraseña"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edit_text">
+
+            <EditText
+                android:id="@+id/currentPsw"
+                android:layout_toStartOf="@+id/passwordCurrentIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Contraseña actual"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+
+            <ImageView
+                android:id="@+id/passwordCurrentIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/hide_password"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edit_text">
+
+            <EditText
+                android:id="@+id/newPsw"
+                android:layout_toStartOf="@+id/passwordNewIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Contraseña nueva"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+
+            <ImageView
+                android:id="@+id/passwordNewIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/hide_password"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edit_text">
+
+            <EditText
+                android:id="@+id/newConfirmPsw"
+                android:layout_toStartOf="@+id/passwordNewConfirmIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Confirmar contraseña nueva"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+
+            <ImageView
+                android:id="@+id/passwordNewConfirmIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/hide_password"/>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="50dp"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_primary"
+            android:text="Actualizar" />
+    </LinearLayout>
+
+</RelativeLayout>

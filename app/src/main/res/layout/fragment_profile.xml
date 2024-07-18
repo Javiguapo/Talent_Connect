@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".Profile">
+
+        <!-- Sección del perfil -->
+    <LinearLayout
+        android:id="@+id/profile_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+    android:padding="16dp"
+    android:background="@drawable/background_edit_text"
+    android:gravity="center">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/baseline_person_24"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/edit_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:drawableLeft="@drawable/baseline_edit_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:textColor="@color/black"/>
+</LinearLayout>
+
+    <!-- Información y sección de configuración -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_below="@id/profile_section"
+android:layout_marginTop="16dp"
+android:background="@drawable/background_edit_text"
+android:padding="16dp">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Personal Information"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:drawableStart="@drawable/baseline_person_24"
+    android:drawablePadding="8dp"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Login and Security"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:drawableStart="@drawable/baseline_admin_panel_settings_24"
+    android:drawablePadding="8dp"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Data and Privacy"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:drawableStart="@drawable/baseline_remove_red_eye_24"
+    android:drawablePadding="8dp"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground" />
+</LinearLayout>
+
+    <!-- Sección de mensajes y soporte técnico -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@id/profile_section"
+    android:layout_marginTop="180dp"
+    android:background="@drawable/background_edit_text"
+    android:padding="16dp">
+
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Messages"
+android:textColor="@color/black"
+android:textSize="16sp"
+android:drawableStart="@drawable/baseline_message_24"
+android:drawablePadding="8dp"
+android:padding="8dp"
+android:background="?attr/selectableItemBackground" />
+
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Technical Support"
+android:textColor="@color/black"
+android:textSize="16sp"
+android:drawableStart="@drawable/baseline_help_24"
+android:drawablePadding="8dp"
+android:padding="8dp"
+android:background="?attr/selectableItemBackground" />
+    </LinearLayout>
+
+    <!-- Sección de cierre de sesión -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_below="@id/profile_section"
+android:layout_marginTop="305dp"
+    android:background="@drawable/background_edit_text"
+    android:padding="16dp">
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Log Out"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:drawableStart="@drawable/baseline_logout_24"
+    android:drawablePadding="8dp"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground" />
+    </LinearLayout>
+
+    </RelativeLayout>
